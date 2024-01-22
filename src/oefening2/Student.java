@@ -2,7 +2,7 @@ package oefening2;
 
 import java.util.HashMap;
 
-public class Student extends Person{
+public class Student extends Person implements IResult{
 
     private String organizaion;
     private HashMap<String, Double> results = new HashMap<>();
@@ -21,6 +21,13 @@ public class Student extends Person{
 
     @Override
     public String getOrganisation() {
-        return null;
+        return organizaion;
     }
+
+    @Override
+    public double getResult(String course) {
+        return results.get(course);
+    }
+
+
 }
